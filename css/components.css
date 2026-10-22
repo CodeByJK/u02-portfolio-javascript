@@ -1,0 +1,262 @@
+/* ===========================
+   components.css – visual
+   =========================== */
+
+/* Logo */
+.logo:hover {
+  text-decoration: none;
+}
+
+/* Navigation */
+.nav-links {
+  font-weight: 600;
+}
+
+.nav-links a {
+  color: var(--color-text-black);
+}
+
+.nav-toggle {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-toggle img {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.nav-toggle:hover img,
+.nav-toggle:focus-visible img {
+  transform: scale(1.1);
+}
+
+.social-links img {
+  width: 2rem;
+  height: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover img,
+.social-links a:focus-visible img {
+  transform: scale(1.2);
+}
+
+/* Hero */
+.hero-text,
+.hero-name {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0;
+  color: var(--color-heading);
+}
+
+.hero-text {
+  color: var(--color-heading);
+}
+
+.hero-name {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-image {
+  width: 250px;
+  height: 250px;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(1deg, #0066cc, #e70faa);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Experience & Education */
+.experience-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.exp-icon {
+  width: 1rem;
+  height: 1rem;
+  filter: grayscale(1);
+  opacity: 0.8;
+}
+
+.employment-type {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background-color: #d8f3dc;
+  color: #166534;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.experience-dates {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: var(--color-muted-text);
+}
+
+/* Tech Stack & Tools */
+.tech-icon {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 1 / 0.7;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-black);
+}
+
+.project-tech {
+  margin-bottom: 1.5rem;
+}
+
+.project-link {
+  color: var(--color-text-black);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-link-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Contact */
+.contact-email {
+  display: block;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+.section-contact p {
+  color: var(--color-heading-secondary);
+}
+
+/* Footer */
+.footer-name {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .project-card {
+    border: 1px solid #333333;
+  }
+  .social-links img,
+  .nav-toggle img {
+    filter: invert(1);
+  }
+}
+
+/* Desktop Layout*/
+@media (min-width: 768px) {
+  /* Hero section */
+  .hero-text,
+  .hero-name {
+    font-size: 3.625rem; /* 58px */
+    font-weight: 700;
+    line-height: 4.375rem; /* 70px */
+    letter-spacing: -0.0625rem; /* -1px */
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 2.625rem; /* 42px */
+    font-weight: 700;
+    line-height: 3.25rem; /* 52px */
+    letter-spacing: -0.025rem; /* -0.4px */
+  }
+
+  .hero-image {
+    width: 21.8125rem; /* 349px */
+    height: 21.8125rem; /* 349px */
+    flex-shrink: 0;
+    padding: 0.5625rem; /* 9px */
+    border-radius: 50%;
+  }
+
+  .experience-info h3 {
+    font-size: 1.2rem; /* 19.2px */
+    font-weight: 400;
+  }
+
+  .experience-info {
+    font-size: 0.875rem; /* 14px */
+    font-weight: 600;
+    color: var(--color-muted-text);
+  }
+
+  .employment-type,
+  .experience-dates {
+    font-size: 0.75rem; /* 12px */
+  }
+
+  .project-tech {
+    font-size: 0.9rem;  /* 14.4px */
+  }
+
+  /* Contact */
+  .section-contact h2,
+  .section-contact p,
+  .section-contact .contact-email {
+    font-family: "DM Sans", sans-serif;
+    font-size: 3.625rem; /* 58px */
+    font-weight: 700;
+    line-height: 4.375rem; /* 70px */
+    letter-spacing: -0.0625rem; /* -1px */
+  }
+}
