@@ -38,10 +38,14 @@
 }
 
 .social-links {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 7rem;
+}
+
+.social-links.visible {
+  display: flex;
 }
 
 /* Hero */
@@ -140,8 +144,7 @@
 
 /* Desktop Layout */
 @media (min-width: 768px) {
-  
-    main {
+  main {
     max-width: 90rem;
     margin-inline: auto;
   }
@@ -153,16 +156,16 @@
   }
 
   .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  padding: 3rem 6rem 0rem;
-  background-color: var(--color-bg);
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 3rem 6rem 0rem;
+    background-color: var(--color-bg);
+  }
 
   .main-nav {
     flex: 1;
@@ -185,6 +188,10 @@
     align-items: center;
     margin: 0 0 0 auto;
     gap: 2rem;
+  }
+
+  .nav-links.hidden {
+    display: flex;
   }
 
   .nav-toggle {
@@ -264,7 +271,7 @@
     gap: 0.5rem;
   }
 
-    /* Projects */
+  /* Projects */
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
   }
