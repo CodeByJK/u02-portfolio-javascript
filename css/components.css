@@ -18,7 +18,7 @@
 
 .skip-link:focus {
   top: 1rem;
-}         
+}
 
 /* Logo */
 .logo:hover {
@@ -45,6 +45,7 @@
   width: 2rem;
   height: 2rem;
   transition: transform 0.2s ease;
+  filter: var(--icon-filter);
 }
 
 .nav-toggle:focus-visible {
@@ -61,6 +62,7 @@
   width: 2rem;
   height: 2rem;
   transition: transform 0.2s ease;
+  filter: var(--icon-filter);
 }
 
 .social-links a:hover img,
@@ -94,7 +96,7 @@
   height: 250px;
   padding: 6px;
   border-radius: 50%;
-  background: linear-gradient(1deg, #0066cc, #e70faa);
+  background: var(--gradient-hero);
 }
 
 .hero-image img {
@@ -121,8 +123,8 @@
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
-  background-color: #d8f3dc;
-  color: #166534;
+  background-color: var(--color-badge-bg);
+  color: var(--color-badge-text);
   font-size: 0.875rem;
   font-weight: 600;
 }
@@ -145,7 +147,8 @@
   background-color: var(--color-bg);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
 }
 
 .project-image {
@@ -209,16 +212,7 @@
   color: transparent;
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    border: 1px solid #333333;
-  }
-  .social-links img,
-  .nav-toggle img {
-    filter: invert(1);
-  }
-}
+
 
 /* Desktop Layout*/
 @media (min-width: 768px) {
@@ -264,7 +258,7 @@
   }
 
   .project-tech {
-    font-size: 0.9rem;  /* 14.4px */
+    font-size: 0.9rem; /* 14.4px */
   }
 
   /* Contact */

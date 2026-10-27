@@ -14,22 +14,30 @@
   --color-text-black: #000000;
   --color-muted-text: #595959;
   --color-accent: #5e3bee;
-  --gradient-primary: linear-gradient(90deg, #0066CC, #E70FAA);
+  --gradient-primary: linear-gradient(90deg, #0066cc, #e70faa);
+  --color-border: #ebeaed;
+  --color-badge-bg: #d8f3dc;
+  --color-badge-text: #166534;
+  --icon-filter: none;
+  --gradient-hero: linear-gradient(1deg, #0066cc, #e70faa);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.15);
   --font-main: "Poppins", sans-serif;
   --radius: 12px;
   --spacing-section: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: #121212;
-    --color-heading: #f5f5f5;
-    --color-heading-secondary: #d9d9ff;
-    --color-text: #e0e0e0;
-    --color-text-black: #ffffff;
-    --color-muted-text: #bdbdbd;
-    --color-accent: #8b7cff;
-  }
+html.dark {
+  --color-bg: #121212;
+  --color-heading: #f5f5f5;
+  --color-heading-secondary: #d9d9ff;
+  --color-text: #e0e0e0;
+  --color-text-black: #ffffff;
+  --color-muted-text: #bdbdbd;
+  --color-accent: #8b7cff;
+  --color-border: #333333;
+  --color-badge-bg: #14532d;
+  --color-badge-text: #bbf7d0;
+  --icon-filter: invert(1);
 }
 
 /* Reset */
