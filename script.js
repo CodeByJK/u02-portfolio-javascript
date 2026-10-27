@@ -1,10 +1,12 @@
 const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
-const socialLinks = document.querySelector(".social-links");
+const navMenu = document.querySelector(".nav-menu");
 
-navLinks.classList.add("hidden");
+// Dölj menyn när sidan laddas
+navMenu.classList.add("hidden");
 
 navToggle.addEventListener("click", function () {
-  navLinks.classList.toggle("hidden");
-  socialLinks.classList.toggle("visible");
+const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+
+navToggle.setAttribute("aria-expanded", String(!isExpanded));
+navMenu.classList.toggle("hidden");
 });
