@@ -24,7 +24,6 @@
   background-color: var(--color-bg);
 }
 
-/* Navigeringsmeny för mobil */
 .nav-menu {
   position: fixed;
   top: 6.5rem;
@@ -40,12 +39,12 @@
   backdrop-filter: blur(10px);
 }
 
-/* Dölj hela menyn när klassen hidden finns */
+/* Hide menu when hidden class exist*/
 .nav-menu.hidden {
   display: none;
 }
 
-/* Navigeringslänkar */
+/* Navigation links */
 .nav-links {
   display: flex;
   flex-direction: column;
@@ -55,7 +54,7 @@
   padding: 0;
 }
 
-/* Sociala ikoner */
+/* Social icons */
 .social-links {
   display: flex;
   justify-content: center;
@@ -210,7 +209,7 @@
     backdrop-filter: none;
   }
 
-  /* Menyn ska alltid visas på desktop */
+  /* Menu always show on desktop */
   .nav-menu,
   .nav-menu.hidden {
     display: flex;
