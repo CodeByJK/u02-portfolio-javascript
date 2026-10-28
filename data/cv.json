@@ -1,0 +1,70 @@
+{
+  "work": [
+    {
+      "title": "Brand Owner Manager, Business Development: Sack, MF & FibreForm",
+      "organization": "Billerud",
+      "location": "Stockholm",
+      "note": null,
+      "start": "2023-11",
+      "end": "2026-06"
+    },
+    {
+      "title": "Brand Owner Manager, Business Area Sack & Kraft Paper",
+      "organization": "Billerud",
+      "location": "Stockholm",
+      "note": null,
+      "start": "2022-09",
+      "end": "2023-11"
+    },
+    {
+      "title": "Sales Manager, FibreForm",
+      "organization": "Billerud",
+      "location": "Stockholm",
+      "note": null,
+      "start": "2020-05",
+      "end": "2022-09"
+    },
+    {
+      "title": "Customer Service Specialist",
+      "organization": "Billerud",
+      "location": "Frövi",
+      "note": null,
+      "start": "2014-08",
+      "end": "2020-05"
+    },
+    {
+      "title": "Personal Trainer & Group Fitness Instructor",
+      "organization": "Self-employed and employed",
+      "location": "France, Scotland, Sweden",
+      "note": null,
+      "start": "2005",
+      "end": "2014"
+    }
+  ],
+  "education": [
+    {
+      "title": "Full-Stack Developer, JavaScript (Higher Vocational Education)",
+      "organization": "Chas Academy",
+      "location": "Stockholm",
+      "note": null,
+      "start": "2026-08",
+      "end": "2028-06"
+    },
+    {
+      "title": "Programming 1",
+      "organization": "JENSEN yrkeshögskola",
+      "location": "Stockholm",
+      "note": "Grade A",
+      "start": "2026-02",
+      "end": "2026-03"
+    },
+    {
+      "title": "Web Development 1",
+      "organization": "JENSEN yrkeshögskola",
+      "location": "Stockholm",
+      "note": "Grade A",
+      "start": "2026-01",
+      "end": "2026-02"
+    }
+  ]
+}

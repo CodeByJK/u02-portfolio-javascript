@@ -76,7 +76,7 @@
   gap: 2rem;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 3px solid #ebeaed;
+  border-bottom: 3px solid var(--color-border);
 }
 
 .experience-info {

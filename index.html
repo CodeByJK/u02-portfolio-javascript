@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
     <script type="module" src="js/main.js"></script>
-    <script src="script.js" defer></script>
   </head>
 
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
-  
+
     <header class="site-header">
       <nav class="main-nav">
         <div class="nav-top">
@@ -32,7 +31,7 @@
           </button>
         </div>
 
-        <div class="nav-menu" id="nav-menu">
+        <div class="nav-menu hidden" id="nav-menu">
           <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -48,8 +47,9 @@
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/johanna-krantz-b57157b9"
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/johanna-krantz-b57157b9"
+                target="_blank"
                 rel="noopener noreferrer">
                 <img
                   src="assets/logos/entypo-social--linkedin-with-circle.svg"
@@ -57,13 +57,29 @@
               </a>
             </li>
             <li>
-              <a href="https://github.com/CodeByJK" target="_blank" rel="noopener noreferrer" >
+              <a
+                href="https://github.com/CodeByJK"
+                target="_blank"
+                rel="noopener noreferrer">
                 <img
                   src="assets/logos/akar-icons--github-fill.svg"
                   alt="GitHub" />
               </a>
             </li>
           </ul>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Switch to dark mode">
+            <img
+              src="assets/logos/circum--dark.svg"
+              alt=""
+              class="icon-moon" />
+            <img
+              src="assets/logos/carbon--light.svg"
+              alt=""
+              class="icon-sun" />
+          </button>
         </div>
       </nav>
     </header>
@@ -99,135 +115,17 @@
         </p>
       </section>
 
-      <!-- Work Experience -->
-      <section class="section-experience">
-        <h2>Work Experience</h2>
+    <!-- Work Experience -->
+<section id="experience" class="section-experience" aria-labelledby="experience-title">
+  <h2 id="experience-title">Work Experience</h2>
+  <ul id="work-list"></ul>
+</section>
 
-        <article class="experience-item">
-          <div class="experience-info">
-            <h3>Frontend Web Developer</h3>
-
-            <div class="experience-company">
-              <img
-                src="assets/logos/bi--building-fill.svg"
-                alt=""
-                class="exp-icon" />
-              <span>Company Name here</span>
-            </div>
-
-            <div class="experience-location">
-              <img src="assets/logos/et--map-pin.svg" alt="" class="exp-icon" />
-              <span>Bengaluru</span>
-            </div>
-          </div>
-
-          <div class="experience-meta">
-            <span class="employment-type">Full Time</span>
-            <p class="experience-dates">Sep 2021 – Dec 2021</p>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <div class="experience-info">
-            <h3>Internship</h3>
-
-            <div class="experience-company">
-              <img
-                src="assets/logos/bi--building-fill.svg"
-                alt=""
-                class="exp-icon" />
-              <span>Company Name here</span>
-            </div>
-
-            <div class="experience-location">
-              <img src="assets/logos/et--map-pin.svg" alt="" class="exp-icon" />
-              <span>Bengaluru</span>
-            </div>
-          </div>
-
-          <div class="experience-meta">
-            <span class="employment-type">Internship</span>
-            <p class="experience-dates">Sep 2021 – Dec 2021</p>
-          </div>
-        </article>
-
-        <article class="experience-item">
-          <div class="experience-info">
-            <h3>Internship</h3>
-
-            <div class="experience-company">
-              <img
-                src="assets/logos/bi--building-fill.svg"
-                alt=""
-                class="exp-icon" />
-              <span>Company Name here</span>
-            </div>
-
-            <div class="experience-location">
-              <img src="assets/logos/et--map-pin.svg" alt="" class="exp-icon" />
-              <span>Bengaluru</span>
-            </div>
-          </div>
-
-          <div class="experience-meta">
-            <span class="employment-type">Internship</span>
-            <p class="experience-dates">Sep 2021 – Dec 2021</p>
-          </div>
-        </article>
-      </section>
-
-      <!-- Education -->
-      <section class="section-education">
-        <h2>Education</h2>
-
-        <article class="education-item experience-item">
-          <div class="experience-info">
-            <h3>Frontend Development</h3>
-
-            <div class="experience-company">
-              <img
-                src="assets/logos/bi--building-fill.svg"
-                alt=""
-                class="exp-icon" />
-              <span>Udemy, YouTube, Google, Medium</span>
-            </div>
-
-            <div class="experience-location">
-              <img src="assets/logos/et--map-pin.svg" alt="" class="exp-icon" />
-              <span>Online</span>
-            </div>
-          </div>
-
-          <div class="experience-meta">
-            <span class="employment-type">Full Time</span>
-            <p class="experience-dates">Jan 2022 – Present</p>
-          </div>
-        </article>
-
-        <article class="education-item experience-item">
-          <div class="experience-info">
-            <h3>Bachelor in Electronics &amp; Communication</h3>
-
-            <div class="experience-company">
-              <img
-                src="assets/logos/bi--building-fill.svg"
-                alt=""
-                class="exp-icon" />
-              <span>Your College Name here</span>
-            </div>
-
-            <div class="experience-location">
-              <img src="assets/logos/et--map-pin.svg" alt="" class="exp-icon" />
-              <span>Bengaluru</span>
-            </div>
-          </div>
-
-          <div class="experience-meta">
-            <span class="employment-type">Full Time</span>
-            <p class="experience-dates">Aug 2020 – Present</p>
-          </div>
-        </article>
-      </section>
+<!-- Education -->
+<section id="education" class="section-education" aria-labelledby="education-title">
+  <h2 id="education-title">Education</h2>
+  <ul id="education-list"></ul>
+</section>
 
       <!-- Tech Stack & Tools -->
       <section id="techstack" class="section-tech-stack-tools">

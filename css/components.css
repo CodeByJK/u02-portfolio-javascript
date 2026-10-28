@@ -70,6 +70,44 @@
   transform: scale(1.2);
 }
 
+/* Theme toggle */
+.theme-toggle {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.theme-toggle img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: var(--icon-filter);
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover img,
+.theme-toggle:focus-visible img {
+  transform: scale(1.2);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Show the moon in light mode and the sun in dark mode */
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+html.dark .theme-toggle .icon-sun {
+  display: block;
+}
+
+html.dark .theme-toggle .icon-moon {
+  display: none;
+}
+
 /* Hero */
 .hero-text,
 .hero-name {
