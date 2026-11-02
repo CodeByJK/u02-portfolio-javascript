@@ -16,7 +16,7 @@
   },
   {
     "repo": "brain-climb",
-    "title": "Brainclimb",
+    "title": "Brain climb",
     "description": "A team-built quiz application featuring interactive questions, a countdown timer, sound effects and saved quiz progress.",
     "image": "assets/project-pics/brainclimb.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
@@ -28,5 +28,13 @@
     "description": "A collaborative mob programming assignment developed together with other students at Chas Academy.",
     "image": "assets/project-pics/mobb.png",
     "technologies": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "Pig Game",
+    "description": "A two-player dice game built in a pair-programming workshop. We developed the game logic in vanilla JavaScript, including game state, DOM updates, event listeners and a two-dice variant.",
+    "image": "assets/project-pics/pig-game.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "githubUrl": "https://github.com/majakarlsson68gmailcom/workshop-pig-game-grupp-maja-johanna",
+    "liveUrl": "https://majakarlsson68gmailcom.github.io/workshop-pig-game-grupp-maja-johanna/"
   }
 ]
