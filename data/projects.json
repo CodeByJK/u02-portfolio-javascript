@@ -1,0 +1,32 @@
+[
+  {
+    "repo": "u02-portfolio-javascript",
+    "title": "Personal Portfolio",
+    "description": "A responsive portfolio built with JavaScript, featuring dynamic CV content, GitHub API integration and a light and dark theme.",
+    "image": "assets/project-pics/pexels-codioful-7134995.jpg",
+    "technologies": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "repo": "u01-chas-assignment",
+    "title": "Developer Portfolio",
+    "description": "My first developer portfolio, built from a Figma design using HTML and CSS. Created as my first web development assignment at Chas Academy.",
+    "image": "assets/project-pics/u01-portfolio.png",
+    "technologies": ["HTML", "CSS"],
+    "liveUrl": "https://deluxe-gumption-4f4082.netlify.app/"
+  },
+  {
+    "repo": "brain-climb",
+    "title": "Brainclimb",
+    "description": "A team-built quiz application featuring interactive questions, a countdown timer, sound effects and saved quiz progress.",
+    "image": "assets/project-pics/brainclimb.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "liveUrl": "https://fyllburken.netlify.app/"
+  },
+  {
+    "repo": "Mobb",
+    "title": "Mobb Programming",
+    "description": "A collaborative mob programming assignment developed together with other students at Chas Academy.",
+    "image": "assets/project-pics/mobb.png",
+    "technologies": ["HTML", "CSS", "JavaScript"]
+  }
+]

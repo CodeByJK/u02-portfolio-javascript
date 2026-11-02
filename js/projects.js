@@ -2,78 +2,132 @@
 import { fetchJson } from "./http.js";
 import { el } from "./dom.js";
 
-
 // GitHub API endpoint for fetching public repositories
-const GITHUB_URL = "https://api.github.com/users/CodeByJK/repos?sort=updated&per_page=100";
+const GITHUB_URL =
+  "https://api.github.com/users/CodeByJK/repos?sort=updated&per_page=100";
 
+// Create a project card using customized project information
+const createProjectCard = (project) => {
+  // Create a screenshot of the project
+  const projectImage = el("img", {
+    className: "project-image",
+    src: project.image,
+    alt: `Screenshot of ${project.title}`,
+  });
 
-// Create a project card using repository data from GitHub
-const createProjectCard = (repo) => {
-    const githubLink = el("a", {
+  // Create technology badges for the project
+  const technologyBadges = project.technologies.map((technology) =>
+    el("span", {
+      className: "technology-badge",
+      text: technology,
+    }),
+  );
+
+  // Create a link to the published application, if available
+  const liveLink = project.liveUrl
+    ? el("a", {
         className: "project-link",
-        href: repo.html_url,
+        href: project.liveUrl,
         target: "_blank",
         rel: "noopener noreferrer",
-        text: "View on GitHub",
-    });
+        text: "Live Demo",
+      })
+    : null;
 
-    return el(
-        "article",
-        { className: "project-card" },
-        el("h3", { text: repo.name }),
-        el("p", {
-            text: repo.description || "No description available.",
-        }),
-        el("div", { className: "project-links" }, githubLink)
-    );
+  // Create a link to the GitHub repository
+  const githubLink = el("a", {
+    className: "project-link",
+    href: project.githubUrl,
+    target: "_blank",
+    rel: "noopener noreferrer",
+    text: "View Code",
+  });
+
+  // Collect available project links
+  const projectLinks = [...(liveLink ? [liveLink] : []), githubLink];
+
+  // Build and return the complete project card
+  return el(
+    "article",
+    { className: "project-card" },
+    projectImage,
+    el("h3", { text: project.title }),
+    el("p", { text: project.description }),
+    el(
+      "div",
+      { className: "project-technology-section" },
+      el("h4", { text: "Technologies" }),
+      el("div", { className: "project-technologies" }, ...technologyBadges),
+    ),
+    el("div", { className: "project-links" }, ...projectLinks),
+  );
 };
 
+// Match selected projects with GitHub repositories and render project cards
+const renderProjects = (container, repositories, projectDetails) => {
+  // Find matching GitHub repositories and exclude forks
+  const selectedProjects = projectDetails
+    .map((project) => {
+      const repository = repositories.find(
+        (repo) => repo.name === project.repo,
+      );
 
-// Filter out forked repositories and render the remaining projects
-const renderProjects = (container, repositories) => {
-    const originalRepositories = repositories.filter(
-        (repo) => !repo.fork
-    );
+      // Skip projects that do not exist or are forks
+      if (!repository || repository.fork) return null;
 
-    const projectCards = originalRepositories.map(createProjectCard);
-    container.replaceChildren(...projectCards);
+      // Combine custom project information with GitHub data
+      return {
+        ...project,
+        githubUrl: repository.html_url,
+        liveUrl: repository.homepage || "",
+      };
+    })
+    .filter(Boolean);
 
-    return originalRepositories.length;
+  // Create and display project cards
+  const projectCards = selectedProjects.map(createProjectCard);
+  container.replaceChildren(...projectCards);
+
+  return selectedProjects.length;
 };
 
-
-// Fetch repositories from GitHub and initialize the projects section
+// Fetch project data from GitHub and the local JSON file
 export const initProjects = async () => {
-    const projectsContainer = document.querySelector("#projects-list");
-    const statusMessage = document.querySelector("#projects-status");
+  const projectsContainer = document.querySelector("#projects-list");
+  const statusMessage = document.querySelector("#projects-status");
 
-    if (!projectsContainer || !statusMessage) return;
+  if (!projectsContainer || !statusMessage) return;
 
-    // Show loading message while fetching repositories
-    statusMessage.textContent = "Loading projects...";
+  // Show loading message while fetching project data
+  statusMessage.textContent = "Loading projects...";
 
-    try {
-        // Fetch repository data from GitHub
-        const repositories = await fetchJson(GITHUB_URL);
+  try {
+    // Fetch data from both sources at the same time
+    const [repositories, projectDetails] = await Promise.all([
+      fetchJson(GITHUB_URL),
+      fetchJson("data/projects.json"),
+    ]);
 
-        // Render projects and get the number of displayed repositories
-        const projectCount = renderProjects(projectsContainer, repositories);
+    // Combine the data and render the project cards
+    const projectCount = renderProjects(
+      projectsContainer,
+      repositories,
+      projectDetails,
+    );
 
-        // Handle empty results
-        if (projectCount === 0) {
-            statusMessage.textContent = "No projects available at the moment.";
-            return;
-        }
-
-        // Clear loading message when projects have loaded successfully
-        statusMessage.textContent = "";
-
-    } catch (error) {
-        console.error("Could not load GitHub projects:", error);
-
-        // Show an error message if the request fails
-        statusMessage.textContent =
-            "Sorry, projects could not be loaded. Please try again later.";
+    // Handle empty results
+    if (projectCount === 0) {
+      statusMessage.textContent = "No projects available at the moment.";
+      return;
     }
-};
 
+    // Clear loading message after successful rendering
+    statusMessage.textContent = "";
+  } catch (error) {
+    console.error("Could not load projects:", error);
+
+    // Show an error message if either request fails
+    statusMessage.textContent =
+      "Sorry, projects could not be loaded. Please try again later.";
+  }
+};

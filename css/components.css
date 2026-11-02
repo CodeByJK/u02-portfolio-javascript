@@ -228,7 +228,9 @@ html.dark .theme-toggle .icon-moon {
 }
 
 .project-card h3 {
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  padding: 0 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-text-black);
@@ -252,6 +254,47 @@ html.dark .theme-toggle .icon-moon {
   width: 1.25rem;
   height: 1.25rem;
   filter: var(--icon-filter);
+}
+
+/* Project technologies */
+
+.project-technology-section {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.project-technology-section h4 {
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-heading);
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background-color: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.project-card > p {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 /* Contact */
@@ -278,8 +321,6 @@ html.dark .theme-toggle .icon-moon {
   background-clip: text;
   color: transparent;
 }
-
-
 
 /* Desktop Layout*/
 @media (min-width: 768px) {
