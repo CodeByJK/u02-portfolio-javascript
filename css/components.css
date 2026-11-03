@@ -73,12 +73,7 @@
 }
 
 
-/* Visible keyboard focus for social icons*/
- .social-links a:not(.icon-ring):focus-visible img {
-  outline: 3px solid var(--color-accent);
-  outline-offset: 5px;
-  border-radius: 50%;
-}
+
 
 /* Icon with a ring (used for icons that have no circle of their own) */
 .social-links .icon-ring {
@@ -107,6 +102,24 @@
   transform: none;
 }
 
+/* Keyboard focus for social icons */
+.social-links a:not(.icon-ring) {
+  position: relative;
+}
+
+.social-links a:not(.icon-ring):focus-visible {
+  outline: none;
+}
+
+.social-links a:not(.icon-ring):focus-visible::after {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 /* Theme toggle */
 .theme-toggle {
   border: none;
@@ -127,9 +140,8 @@
   transform: scale(1.2);
 }
 
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
+.social-links a,
+.theme-toggle {
   border-radius: 50%;
 }
 
