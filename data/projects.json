@@ -1,16 +1,11 @@
 [
   {
-    "repo": "u02-portfolio-javascript",
-    "title": "Personal Portfolio",
-    "description": "A responsive portfolio built with JavaScript, featuring dynamic CV content, GitHub API integration and a light and dark theme.",
-    "image": "assets/project-pics/pexels-codioful-7134995.jpg",
-    "technologies": ["HTML", "CSS", "JavaScript"]
-  },
-  {
     "repo": "u01-chas-assignment",
     "title": "Developer Portfolio",
     "description": "My first developer portfolio, built from a Figma design using HTML and CSS. Created as my first web development assignment at Chas Academy.",
     "image": "assets/project-pics/u01-portfolio.png",
+    "width": 2111,
+    "height": 1271,
     "technologies": ["HTML", "CSS"],
     "liveUrl": "https://deluxe-gumption-4f4082.netlify.app/"
   },
@@ -19,6 +14,8 @@
     "title": "Brain climb",
     "description": "A team-built quiz application featuring interactive questions, a countdown timer, sound effects and saved quiz progress.",
     "image": "assets/project-pics/brainclimb.png",
+    "width": 1442,
+    "height": 1029,
     "technologies": ["HTML", "CSS", "JavaScript"],
     "liveUrl": "https://fyllburken.netlify.app/"
   },
@@ -27,12 +24,16 @@
     "title": "Mobb Programming",
     "description": "A collaborative mob programming assignment developed together with other students at Chas Academy.",
     "image": "assets/project-pics/mobb.png",
+    "width": 2282,
+    "height": 1286,
     "technologies": ["HTML", "CSS", "JavaScript"]
   },
   {
     "title": "Pig Game",
     "description": "A two-player dice game built in a pair-programming workshop. We developed the game logic in vanilla JavaScript, including game state, DOM updates, event listeners and a two-dice variant.",
     "image": "assets/project-pics/pig-game.png",
+    "width": 1861,
+    "height": 1075,
     "technologies": ["HTML", "CSS", "JavaScript"],
     "githubUrl": "https://github.com/majakarlsson68gmailcom/workshop-pig-game-grupp-maja-johanna",
     "liveUrl": "https://majakarlsson68gmailcom.github.io/workshop-pig-game-grupp-maja-johanna/"

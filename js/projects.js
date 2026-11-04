@@ -6,7 +6,6 @@ import { el } from "./dom.js";
 const GITHUB_URL =
   "https://api.github.com/users/CodeByJK/repos?sort=updated&per_page=100";
 
-
 // Create a project card using customized project information
 const createProjectCard = (project) => {
   // Create a screenshot of the project
@@ -14,9 +13,10 @@ const createProjectCard = (project) => {
     className: "project-image",
     src: project.image,
     alt: `Screenshot of ${project.title}`,
+    width: project.width,
+    height: project.height,
     loading: "lazy",
   });
-
 
   // Create technology badges for the project
   const technologyBadges = project.technologies.map((technology) =>
@@ -25,7 +25,6 @@ const createProjectCard = (project) => {
       text: technology,
     }),
   );
-
 
   // Create a link to the published application, if available
   const liveLink = project.liveUrl
@@ -38,7 +37,6 @@ const createProjectCard = (project) => {
       })
     : null;
 
-
   // Create a link to the GitHub repository
   const githubLink = el("a", {
     className: "project-link",
@@ -48,11 +46,9 @@ const createProjectCard = (project) => {
     text: "View Code",
   });
 
-
   // Collect available project links
   const projectLinks = [...(liveLink ? [liveLink] : []), githubLink];
 
-  
   // Build and return the complete project card
   return el(
     "article",
@@ -70,41 +66,38 @@ const createProjectCard = (project) => {
   );
 };
 
-
 // Match selected projects with GitHub repositories and render project cards
 const renderProjects = (container, repositories, projectDetails) => {
+  const selectedProjects = projectDetails
+    .map((project) => {
+      const repository = repositories.find(
+        (repo) => repo.name === project.repo,
+      );
 
-    const selectedProjects = projectDetails
-        .map((project) => {
-            const repository = repositories.find(
-                (repo) => repo.name === project.repo
-            );
+      // Skip forks from the user's own repositories
+      if (repository?.fork) return null;
 
-            // Skip forks from the user's own repositories
-            if (repository?.fork) return null;
+      // Use GitHub API data when available, otherwise use manual links
+      const githubUrl = repository?.html_url || project.githubUrl;
+      const liveUrl = repository?.homepage || project.liveUrl || "";
 
-            // Use GitHub API data when available, otherwise use manual links
-            const githubUrl = repository?.html_url || project.githubUrl;
-            const liveUrl = repository?.homepage || project.liveUrl || "";
+      // Skip projects without a GitHub link
+      if (!githubUrl) return null;
 
-            // Skip projects without a GitHub link
-            if (!githubUrl) return null;
+      return {
+        ...project,
+        githubUrl,
+        liveUrl,
+      };
+    })
+    .filter(Boolean);
 
-            return {
-                ...project,
-                githubUrl,
-                liveUrl,
-            };
-        })
-        .filter(Boolean);
+  // Create and display project cards
+  const projectCards = selectedProjects.map(createProjectCard);
+  container.replaceChildren(...projectCards);
 
-    // Create and display project cards
-    const projectCards = selectedProjects.map(createProjectCard);
-    container.replaceChildren(...projectCards);
-
-    return selectedProjects.length;
+  return selectedProjects.length;
 };
-
 
 // Fetch project data from GitHub and the local JSON file
 export const initProjects = async () => {
