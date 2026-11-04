@@ -27,6 +27,8 @@
 
   --color-nav-bg: rgba(243, 239, 229, 0.75);
 
+  --color-link-hover: #234536;
+
   --icon-filter: none;
 
   --gradient-hero: linear-gradient(1deg, #315b45, #b08a35);
@@ -62,6 +64,8 @@ html.dark {
   --color-badge-text: #26352c;
 
   --color-nav-bg: rgba(15, 28, 22, 0.75);
+
+  --color-link-hover: #e5c36a;
 
   --icon-filter: invert(1);
 
@@ -126,6 +130,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: var(--color-link-hover);
 }
 
 :where(a, button):focus-visible {
@@ -150,14 +155,9 @@ a:hover {
   color: transparent;
 }
 
-.logo-tag {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.logo-name {
-  font-size: 1.25rem;
-  font-weight: 600;
+.logo img {
+  width: 150px;
+  height: auto;
 }
 
 /* Sections */
