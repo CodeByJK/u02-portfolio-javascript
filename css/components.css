@@ -48,10 +48,6 @@
   filter: var(--icon-filter);
 }
 
-.nav-toggle:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
-}
 
 .nav-toggle:hover img,
 .nav-toggle:focus-visible img {
@@ -71,8 +67,6 @@
 .social-links a:focus-visible img {
   transform: scale(1.2);
 }
-
-
 
 
 /* Icon with a ring (used for icons that have no circle of their own) */
@@ -395,7 +389,6 @@ html.dark .theme-toggle .icon-moon {
   .section-contact h2,
   .section-contact p,
   .section-contact .contact-email {
-    font-family: "DM Sans", sans-serif;
     font-size: 3.625rem; /* 58px */
     font-weight: 700;
     line-height: 4.375rem; /* 70px */
