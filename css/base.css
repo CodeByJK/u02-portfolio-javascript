@@ -2,7 +2,6 @@
    base.css – global styling
    =========================== */
 
-
 /* CSS variables */
 
 :root {
@@ -25,6 +24,8 @@
 
   --color-badge-bg: #f1d27a;
   --color-badge-text: #26352c;
+
+  --color-nav-bg: rgba(243, 239, 229, 0.75);
 
   --icon-filter: none;
 
@@ -60,6 +61,8 @@ html.dark {
   --color-badge-bg: #e5c36a;
   --color-badge-text: #26352c;
 
+  --color-nav-bg: rgba(15, 28, 22, 0.75);
+
   --icon-filter: invert(1);
 
   --gradient-hero: linear-gradient(1deg, #a6c6a9, #e5c36a);
@@ -93,7 +96,7 @@ main {
   padding-top: 10rem;
 }
 
-/* Typograpy */
+/* Typography */
 h1,
 h2 {
   font-weight: 700;
