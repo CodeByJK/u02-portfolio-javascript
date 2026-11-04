@@ -14,6 +14,7 @@ const createProjectCard = (project) => {
     className: "project-image",
     src: project.image,
     alt: `Screenshot of ${project.title}`,
+    loading: "lazy",
   });
 
 
