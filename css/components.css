@@ -25,6 +25,19 @@
   text-decoration: none;
 }
 
+/* Logo themes */
+.logo-dark {
+  display: none;
+}
+
+html.dark .logo-light {
+  display: none;
+}
+
+html.dark .logo-dark {
+  display: block;
+}
+
 /* Navigation */
 .nav-links {
   font-weight: 600;
@@ -63,7 +76,6 @@
 .nav-toggle:focus-visible img {
   transform: scale(1.1);
 }
-
 
 /* Social icons */
 
@@ -268,10 +280,6 @@ html.dark .theme-toggle .icon-moon {
   object-fit: cover;
 }
 
-.project-content {
-  padding: 1.5rem;
-}
-
 .project-card h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -286,7 +294,10 @@ html.dark .theme-toggle .icon-moon {
 }
 
 .project-link {
-  color: var(--color-text-black);
+  display: inline-flex;
+  align-items: top;
+  gap: 0.5rem;
+  color: var(--color-heading);
   font-weight: 500;
   text-decoration: none;
 }
@@ -298,7 +309,6 @@ html.dark .theme-toggle .icon-moon {
 .project-link-icon {
   width: 1.25rem;
   height: 1.25rem;
-  filter: var(--icon-filter);
 }
 
 /* Project technologies */
@@ -408,6 +418,10 @@ html.dark .theme-toggle .icon-moon {
   .employment-type,
   .experience-dates {
     font-size: 0.75rem; /* 12px */
+  }
+
+  .tools-title {
+    font-size: 2rem;
   }
 
   .project-tech {

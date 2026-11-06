@@ -27,8 +27,14 @@
         <div class="nav-top">
           <a href="#home" class="logo" aria-label="CodeByJK – Home">
             <img
+              class="logo-light"
               src="./assets/logos/codebyjkLogoGreenGold.png"
               alt="CodeByJK" />
+            <img
+              class="logo-dark"
+              src="./assets/logos/codebyjkLogoBeigeGold.png"
+              alt=""
+              aria-hidden="true" />
           </a>
 
           <button
@@ -153,8 +159,8 @@
       </section>
 
       <!-- About Me -->
-      <section id="about" class="section-about">
-        <h2>About Me</h2>
+      <section id="about" class="section-about" aria-labelledby="about-title">
+        <h2 id="about-title">About Me</h2>
         <p>
           I am a full-stack JavaScript student at Chas Academy, based in
           Stockholm, transitioning into web development after nearly 12 years in
@@ -202,8 +208,11 @@
       </section>
 
       <!-- Tech Stack & Tools -->
-      <section id="techstack" class="section-tech-stack-tools">
-        <h2 id="my-tech-stack">My Tech Stack</h2>
+      <section
+        id="techstack"
+        class="section-tech-stack-tools"
+        aria-labelledby="tech-stack-title">
+        <h2 id="tech-stack-title">My Tech Stack</h2>
         <p class="tech-stack-description">Technologies I use regularly:</p>
 
         <ul class="tech-grid">
@@ -263,7 +272,7 @@
               class="tech-icon" />
           </li>
         </ul>
-        <h2 class="tools-title">Tools</h2>
+        <h3 id="tools-title" class="tools-title">Tools</h3>
         <ul class="tech-grid">
           <li>
             <img
@@ -310,7 +319,10 @@
       </section>
 
       <!-- Projects -->
-      <section id="projects" class="section-projects">
+      <section
+        id="projects"
+        class="section-projects"
+        aria-labelledby="projects-title">
         <h2 id="projects-title">Projects</h2>
         <p class="projects-description">Things I have built so far:</p>
 
@@ -322,8 +334,11 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact" class="section-contact">
-        <h2>Contact</h2>
+      <section
+        id="contact"
+        class="section-contact"
+        aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
         <p>
           Have a question or want to get in touch? Please email me at:
           <a href="mailto:codebyjk@outlook.com" class="contact-email">
