@@ -27,7 +27,7 @@
 
   --color-nav-bg: rgba(243, 239, 229, 0.75);
 
-  --color-link-hover: #234536;
+  --color-link-hover: #397653;
 
   --icon-filter: none;
 
@@ -129,7 +129,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--color-link-hover);
 }
 

@@ -38,6 +38,8 @@ html.dark .logo-dark {
   display: block;
 }
 
+
+
 /* Navigation */
 .nav-links {
   font-weight: 600;
@@ -289,21 +291,21 @@ html.dark .theme-toggle .icon-moon {
   color: var(--color-text-black);
 }
 
-.project-tech {
-  margin-bottom: 1.5rem;
-}
-
 .project-link {
   display: inline-flex;
-  align-items: top;
+  align-items: flex-start;
   gap: 0.5rem;
-  color: var(--color-heading);
+  color: var(--color-text-black);
   font-weight: 500;
-  text-decoration: none;
+  transform-origin: center;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  color: var(--color-link-hover);
+  transform: scale(1.08);
 }
 
 .project-link-icon {
@@ -361,8 +363,13 @@ html.dark .theme-toggle .icon-moon {
   color: transparent;
 }
 
+.contact-email {
+  transition: transform 0.2s ease;
+  transform-origin: center;
+}
+
 .contact-email:hover {
-  text-decoration: underline;
+  transform: scale(1.08);
 }
 
 .section-contact p {
@@ -424,17 +431,12 @@ html.dark .theme-toggle .icon-moon {
     font-size: 2rem;
   }
 
-  .project-tech {
-    font-size: 0.9rem; /* 14.4px */
-  }
-
   /* Contact */
-  .section-contact h2,
   .section-contact p,
   .section-contact .contact-email {
-    font-size: 3.625rem; /* 58px */
-    font-weight: 700;
-    line-height: 4.375rem; /* 70px */
-    letter-spacing: -0.0625rem; /* -1px */
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: normal;
   }
 }

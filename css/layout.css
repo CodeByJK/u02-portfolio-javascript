@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 5rem;
+  padding-top: 0
 }
 
 .nav-top {
@@ -20,13 +20,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+ background-color: var(--color-nav-bg);
+backdrop-filter: blur(10px);
   padding: 1rem 1rem 0.5rem;
-  background-color: var(--color-bg);
+  height: 5rem;
 }
 
 .nav-menu {
   position: fixed;
-  top: 6.5rem;
+  top: 5rem;
   left: 0;
   right: 0;
   z-index: 999;
@@ -37,11 +39,27 @@
   padding: 1.5rem;
   background-color: var(--color-nav-bg);
   backdrop-filter: blur(10px);
+
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s;
 }
 
-/* Hide menu when hidden class exist*/
 .nav-menu.hidden {
-  display: none;
+  opacity: 0;
+  transform: translateY(-15px);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0s linear 0.3s;
 }
 
 /* Navigation links */
@@ -65,6 +83,11 @@
 }
 
 /* Hero */
+.hero {
+  margin-top: 0;
+  padding-top: 0rem;
+}
+
 .hero-image {
   margin-top: 3rem;
 }
@@ -179,8 +202,9 @@
     z-index: 1000;
     display: flex;
     align-items: center;
-    padding: 3rem 6rem 0rem;
-    background-color: var(--color-bg);
+    padding: 3rem 6rem 1rem;
+   background-color: var(--color-nav-bg);
+backdrop-filter: blur(10px);
   }
 
   .main-nav {
@@ -193,6 +217,7 @@
   .nav-top {
     position: static;
     width: auto;
+    height: auto;
     padding: 0;
     background-color: transparent;
   }
@@ -213,6 +238,11 @@
   .nav-menu,
   .nav-menu.hidden {
     display: flex;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
   }
 
   .nav-links {
@@ -307,5 +337,12 @@
   /* Projects */
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu,
+  .nav-menu.hidden {
+    transition: none;
   }
 }
