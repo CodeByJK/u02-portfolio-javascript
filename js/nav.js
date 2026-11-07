@@ -1,4 +1,4 @@
-const DESKTOP_QUERY = "(min-width: 768px)";
+const DESKTOP_QUERY = "(min-width: 825px)";
 
 export const initNav = () => {
   const navToggle = document.querySelector(".nav-toggle");

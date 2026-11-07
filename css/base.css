@@ -157,7 +157,9 @@ a:hover {
 
 .logo img {
   width: 150px;
+  max-width: 100%;
   height: auto;
+  flex-shrink: 0;
 }
 
 /* Sections */
