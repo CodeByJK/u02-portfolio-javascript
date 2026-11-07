@@ -38,7 +38,6 @@ html.dark .logo-dark {
   display: block;
 }
 
-
 /* Navigation */
 .nav-links {
   font-weight: 600;
@@ -268,6 +267,9 @@ html.dark .theme-toggle .icon-moon {
 
 /* Project Cards */
 .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background-color: var(--color-bg);
   border-radius: var(--radius);
   overflow: hidden;
@@ -345,12 +347,14 @@ html.dark .theme-toggle .icon-moon {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0 1.5rem 1.5rem;
+  margin-top: auto;
 }
 
 .project-card > p {
   padding: 0 1.5rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  flex-grow: 1;
 }
 
 /* Contact */
@@ -384,7 +388,7 @@ html.dark .theme-toggle .icon-moon {
 }
 
 /* Desktop Layout*/
-@media (min-width: 768px) {
+@media (min-width: 825px) {
   /* Hero section */
   .hero-text,
   .hero-name {

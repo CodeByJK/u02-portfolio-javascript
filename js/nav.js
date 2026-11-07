@@ -24,6 +24,22 @@ export const initNav = () => {
     if (event.target.closest("a")) setMenuOpen(false);
   });
 
+  // Close the menu when clicking outside the navigation
+document.addEventListener("click", (event) => {
+  if (
+    isMenuOpen() &&
+    !navMenu.contains(event.target) &&
+    !navToggle.contains(event.target)
+  ) {
+    setMenuOpen(false);
+  }
+});
+
+// Close the menu when clicking inside it
+navMenu.addEventListener("click", (event) => {
+  setMenuOpen(false);
+});
+
   // Close with Escape and return focus to the toggle button
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && isMenuOpen()) {
