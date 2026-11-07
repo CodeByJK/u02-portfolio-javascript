@@ -2,91 +2,197 @@
 
 ## Publicerad sida
 
-[Developer Portfolio](https://deluxe-gumption-4f4082.netlify.app/)
+[Developer Portfolio]()
 
-## Designskiss
+# Min utvecklarportfolio
 
-[Originaldesign i Figma](https://www.figma.com/design/ikRGSB3qPVQzgyeMCrCM4S/Developer-Portfolio-Design?node-id=0-1&p=f&t=H0b7oqlB5WhoET4A-0)
+En personlig utvecklarportfolio byggd med HTML, CSS och vanilla JavaScript. Syftet med webbplatsen är att presentera min bakgrund, arbetslivserfarenhet, utbildning och utvalda utvecklingsprojekt.
 
-## Från designskiss till kod
+Portfolion kombinerar data från en lokal JSON-fil med information från GitHubs REST API för att skapa dynamiskt innehåll.
 
-Jag började med att studera Figma-skissen för att förstå hur sidan var uppbyggd, vilka färger och typsnitt som användes, spacing och hur layouten ändrades mellan mobil och desktop. Jag började med mobil-layouten eftersom det var en instruktion från läraren att arbeta mobile-first. Jag byggde först HTML-strukturen och sedan CSS och delade upp CSS:en i `base.css` för globala regler, `layout.css` för struktur och layout och `components.css` för visuell styling.
+## Publicerad webbplats
 
-En av sakerna som blev kluriga var navigationen. Jag valde att göra den fixerad eftersom den alltid är synlig i designskissen. Det gjorde att sektioner inte syntes då de låg bakom navigationen när jag klickade på en ankarlänk. Jag löste det med `padding-top` på `main` som skapar plats för den fixerade navigationen och `scroll-margin-top` på `section` som gör att sektionen hamnar rätt vid navigering.
+**[Besök min portfolio – LÄGG IN DIN PUBLICERADE NETLIFY-LÄNK HÄR]**
 
-När jag hade byggt mobil-versionen upptäckte jag att desktop-versionen i Figma egentligen var uppdelad i flera sidor. Jag frågade min lärare och fick ok på att behålla min struktur, eftersom mobilversionen är en scrollande sida och vi senare kommer att arbeta med React och TypeScript. Mina navigeringslänkar leder därför till respektive sektion på samma sida. Om jag skulle följa desktopskissen exakt skulle jag dela upp innehållet i separata HTML-sidor och länka navigationen till respektive sida.
+## Funktioner
 
-CSS-variabler i `:root` används för färger, gradient och andra återkommande värden. Det gör det enklare att ändra färger konsekvent och minskar upprepning i CSS:en. Jag använder också CSS-arv, exempelvis genom att sätta `font-family` och grundläggande textfärg på `body`, så att dessa egenskaper kan ärvas av innehållet.
+- Responsiv layout anpassad för mobil, surfplatta och desktop.
+- Dynamisk presentation av CV-information från en lokal JSON-fil.
+- Dynamisk hämtning av projektinformation från GitHubs REST API.
+- Lokal projektdata som gör det möjligt att presentera även teamprojekt och projekt från andra GitHub-konton.
+- Automatisk filtrering av forks.
+- Loading-, error- och empty states för projektsektionen.
+- Ljust och mörkt tema med användarens val sparat i localStorage.
+- Stöd för användarens systeminställning för ljust eller mörkt tema.
+- Responsiv navigering med stöd för tangentbord.
+- Semantisk HTML och tydliga fokusmarkeringar.
 
-## Semantik
+## Tekniker
 
-Jag använder semantiska HTML-element där det passar innehållet, bland annat `header`, `nav`, `main`, `section`, `article`, `footer`, rubriker och listor.
+- HTML5
+- CSS3
+- JavaScript (ES Modules)
+- GitHub REST API
+- JSON
+- localStorage
+- Git och GitHub
 
-Exempelvis används `article` för varje arbetslivserfarenhet och `nav` för navigationen. Tech Stack och sociala länkar är uppbyggda som listor eftersom de består av flera länkar/objekt.
+## Projektstruktur
 
-`Div` används där det behövs som strukturell wrapper men där det inte finns något bättre semantiskt element. Ett exempel är `.experience-info`, som grupperar jobbtitel, företag och plats.
-
-## Layout och responsivitet
-
-Jag använder både Flexbox och Grid eftersom de passar för olika typer av layout och har olika styrkor. De kompletterar också varandra bra när de används tillsammans.
-
-Flexbox passar när layouten huvudsakligen är endimensionell, exempelvis i navigationen, sociala länkar och hero-sektionen. På desktop har `.hero-content`:
-
-```css
-.hero-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+```text
+u02-portfolio-javascript/
+│
+├── assets/
+│   ├── logos/
+│   └── project-pics/
+│
+├── css/
+│   ├── base.css
+│   ├── components.css
+│   └── layout.css
+│
+├── data/
+│   ├── cv.json
+│   └── projects.json
+│
+├── js/
+│   ├── main.js
+│   ├── theme.js
+│   ├── nav.js
+│   ├── cv.js
+│   ├── projects.js
+│   ├── dom.js
+│   ├── http.js
+│   └── storage.js
+│
+├── index.html
+└── README.md
 ```
 
-Här placeras texten på ena sidan och bilden på den andra. `space-between` fördelar utrymmet och `align-items: center` centrerar innehållet vertikalt.
+## Köra projektet lokalt
 
-Grid passar när jag behöver kontrollera både rader och kolumner, exempelvis i experience-sektionen, Tech Stack och projektkorten. På desktop har projektkorten:
+1. Klona repot:
 
-```css
-.projects-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-```
+   ```bash
+   git clone https://github.com/CodeByJK/u02-portfolio-javascript.git
+   ```
 
-Tre `1fr` skapar tre lika stora kolumner eftersom `1fr` delar upp det tillgängliga utrymmet. På mobil använder jag `1fr` så att korten visas i en kolumn.
+2. Öppna projektmappen i Visual Studio Code.
 
-På desktop används `display: contents` på `.experience-info` så att dess barn kan ingå direkt i `.experience-item`-elementets Grid-layout. Det gör att jag kan placera `h3` över två kolumner medan företag och plats hamnar i egna kolumner.
+3. Starta en lokal utvecklingsserver, exempelvis med tillägget Live Server.
 
-Jag valde `768px` som breakpoint eftersom det är en vanlig utgångspunkt för mindre tablets. Jag testade sidan i olika fönsterstorlekar och tyckte att layouten fungerade bra vid denna brytpunkt. Om innehållet hade sett dåligt ut vid `768px` hade jag flyttat breakpointen.
+4. Öppna den lokala adressen som servern tillhandahåller i webbläsaren.
 
-## Tillgänglighet
+En lokal server rekommenderas eftersom webbplatsen hämtar JSON-filer med `fetch()`.
 
-Jag har tänkt på tillgänglighet både i HTML och CSS. Bilder som innehåller information har beskrivande alt-texter och dekorativa ikoner har `alt=""`. Jag har också lagt till `:focus-visible` så att fokus syns när sidan används med tangentbord.
+---
 
-Jag kontrollerade färgkontrasten och upptäckte att vissa färgkombinationer från Figma-skissen inte uppfyllde WCAG AA. Jag justerade därför vissa färger för att få bättre kontrast samtidigt som jag försökte vara så nära Figma-skissen som möjligt.
+# Reflektion
 
-Jag har testat sidan på flera sätt:
+## 1. Dataflödet – från GitHub API till DOM
 
-* HTML-validatorn gav 0 fel.
-* Jag testade navigering med tangentbord och Tab-tangenten.
-* Lighthouse gav 100 % Accessibility i både ljust och mörkt läge.
-* Jag testade den publicerade sidan i Chrome och Firefox.
-* Eftersom jag använder Windows testade jag Safari via BrowserStack och fick 100 % på accessibility-testet.
-* Jag testade även dark mode och kontrollerade att text och ikoner fortfarande var läsbara.
+När webbplatsen laddas initierar `main.js` de olika JavaScript-modulerna, bland annat `initProjects()` i `projects.js`.
 
-Jag använder `prefers-color-scheme` för att följa användarens systeminställning för dark mode. Vissa SVG-ikoner syntes dåligt mot den mörka bakgrunden, så jag använder `filter: invert(1)` på dessa i dark mode.
+Projektsektionen hämtar data från två källor med hjälp av `Promise.all()`: GitHubs REST API och den lokala filen `data/projects.json`. Genom att använda `Promise.all()` kan båda anropen genomföras parallellt i stället för att vänta på att det ena ska bli klart innan det andra startar.
 
-## Användbarhet
+Anropet till GitHub är en GET-förfrågan till:
 
-Jag tycker att designen använder visuell hierarki, whitespace och konsekvens på ett bra sätt. Rubrikernas storlek och färg visar vad som är viktigast, medan mellanrummen skapar tydliga avstånd mellan sektionerna. De återkommande projektkorten har samma struktur, vilket gör sidan lättare att överblicka. Den fixerade navigationen gör det enkelt att ta sig mellan sidans olika delar.
+`https://api.github.com/users/CodeByJK/repos?sort=updated&per_page=100`
 
-Om jag skulle utveckla sidan vidare skulle jag göra hamburgerikonen funktionell och ersätta sociala länkar och projektlänkar med riktiga länkar. Mobilversionen följer designskissen visuellt, men hamburger-menyn är inte funktionell eftersom vi inte skulle använda JavaScript i uppgiften.
+Förfrågan ber GitHub om upp till 100 publika repositories som tillhör mitt konto, sorterade efter när de senast uppdaterades.
 
-## Styrkor och svagheter
+GitHub svarar med JSON-data som bland annat innehåller repository-namn, beskrivningar, länkar och information om huruvida ett repository är en fork.
 
-En styrka med projektet är att jag har fått en bättre förståelse för när Flexbox och Grid passar bäst och hur de kan kombineras. Jag är också nöjd med uppdelningen mellan `base.css`, `layout.css` och `components.css`, eftersom det gör koden lättare att hitta och förstå.
+Innan informationen visas på webbplatsen bearbetar min kod svaret. I `renderProjects()` används bland annat `find()` för att matcha repositories med informationen i min lokala projektfil, och `filter()` för att sortera bort forks. Därefter kombineras informationen från de två källorna och `map()` används för att skapa projektkorten.
 
-En svaghet är att mobil- och desktop-layouten skiljer sig ganska mycket, vilket gjorde vissa delar mer komplicerade att anpassa responsivt. Jag hade också kunnat strukturera CSS:en ännu bättre genom att planera vissa regler och komponenter mer konsekvent från början. Det hade kunnat göra koden enklare att underhålla och ändra.
+Slutligen läggs korten in i DOM med `replaceChildren()`.
 
-## AI-verktyg
+Detta innebär att informationen inte bara hämtas och visas direkt. Den bearbetas och kombineras först för att ge det resultat jag vill presentera.
 
-Jag använde AI som stöd och bollplank under utvecklingen, framför allt kring Flexbox och Grid, responsiv design, tillgänglighet och felsökning. Ett exempel är problemet med den fixerade navigationen och ankarlänkarna. Jag använde även AI för att förstå `display: contents` och dark mode.
+## 2. Varför jag valde två olika datakällor
 
-Förslagen kontrollerade jag genom att prova dem i min egen kod, anpassa dem efter designen och testa resultatet med validatorer, Lighthouse och DevTools. Jag gjorde själv de slutliga valen och implementerade lösningarna.
+Jag valde att kombinera GitHubs API med en egen JSON-fil eftersom jag ville ha flexibilitet i vilka projekt som kunde visas i portfolion.
+
+GitHubs API hämtar automatiskt information om mina egna publika repositories. Det är användbart eftersom informationen hålls aktuell utan att jag behöver uppdatera den manuellt varje gång ett repository ändras.
+
+Det finns däremot en begränsning: när jag hämtar repositories från mitt eget GitHub-konto får jag inte automatiskt med teamprojekt som ligger under någon annans konto.
+
+Därför skapade jag `projects.json` som en kompletterande datakälla. Där kan jag själv bestämma vilka projekt som ska presenteras och lägga till information som beskrivningar, bilder och tekniker.
+
+Det gör att jag även kan visa teamprojekt där repositoryt tillhör en annan person eller organisation, även om det inte finns bland resultaten från mitt eget GitHub API-anrop.
+
+Mitt CV fungerar på ett annat sätt. Informationen i `cv.json` har jag skrivit själv och den innehåller relativt statisk information om min utbildning och arbetslivserfarenhet. Den behöver därför inte hämtas från en extern tjänst.
+
+Skillnaden är alltså att CV:t har en enda lokal datakälla, medan projektsektionen kombinerar en extern och en lokal datakälla. Genom att dela upp informationen på det här sättet får jag både automatiserad uppdatering och kontroll över innehållet.
+
+## 3. DOM-manipulation och händelser
+
+Jag har delat upp JavaScript-koden i ES-moduler för att varje fil ska ha ett tydligt ansvarsområde. `main.js` initierar funktionerna, medan exempelvis `cv.js`, `projects.js`, `theme.js` och `nav.js` hanterar olika delar av webbplatsen.
+
+I `dom.js` skapade jag en återanvändbar hjälpfunktion som heter `el()`. Den använder `document.createElement()` för att skapa HTML-element, sätta attribut och lägga till underordnade element.
+
+I `projects.js` används exempelvis `createProjectCard()` för att bygga projektkorten. På motsvarande sätt använder `cv.js` funktionen `createEntry()` för att skapa poster i CV-sektionerna.
+
+Jag använder händelselyssnare där användaren behöver kunna interagera med webbplatsen. Temaknappen lyssnar på klick, medan navigeringen hanterar klick, klick utanför menyn, Escape-tangenten och förändringar i skärmens storlek.
+
+Det gör att funktionerna kan reagera på användarens handlingar och anpassa sig efter olika skärmstorlekar.
+
+## 4. Semantisk och tillgänglig markup
+
+En utmaning var att se till att HTML som genereras med JavaScript håller samma semantiska kvalitet och tillgänglighet som den HTML jag själv skrev i u01.
+
+Jag använder semantiska element som `article`, rubriker, `p`, `li` och `time` i stället för att bygga hela strukturen med generella `div`-element.
+
+Bilder får beskrivande alt-texter när de förmedlar information, medan dekorativa bilder kan ha tomma alt-attribut. Datum presenteras med `time`-element och ett `datetime`-attribut.
+
+I min hjälpfunktion `el()` använder jag `textContent` för att lägga in text i stället för att använda `innerHTML`. Det gör också att texten inte tolkas som HTML-kod.
+
+Jag har kontrollerat webbplatsen med WAVE, testat tangentbordsnavigering och fokusmarkeringar samt kontrollerat HTML-koden med W3C:s validator. Valideringen visade inga fel eller varningar.
+
+## 5. Temaväxling med CSS-variabler
+
+Jag implementerade ljust och mörkt tema med hjälp av CSS custom properties, även kallade CSS-variabler.
+
+Grundfärgerna definieras i `:root` i `base.css`. Det mörka temat använder samma variabler men skriver över deras värden under klassen `html.dark`.
+
+JavaScript i `theme.js` ansvarar endast för att lägga till eller ta bort klassen `dark` på HTML-elementet. Därefter sköter CSS resten av färgväxlingen.
+
+Användarens val sparas i localStorage med hjälp av funktioner i `storage.js`. När sidan laddas kontrolleras först om det finns ett sparat val. Om det inte finns något sparat val följer webbplatsen användarens systeminställning med hjälp av `prefers-color-scheme`.
+
+Jag valde denna lösning eftersom den separerar ansvarsfördelningen mellan JavaScript och CSS. Om jag hade satt alla färger direkt i JavaScript hade jag behövt hantera många individuella färgvärden och stylingbeslut i koden. Med CSS-variabler kan jag ändra färgpaletten på ett centralt ställe utan att behöva ändra JavaScript-logiken.
+
+## 6. Felhantering och oväntade situationer
+
+Jag ville att projektsektionen skulle ge tydlig återkoppling till besökaren även när något inte fungerar som förväntat.
+
+I `projects.js` visas ett laddningsmeddelande innan datahämtningen börjar. Den gemensamma funktionen `fetchJson()` i `http.js` kontrollerar om anropet lyckades och använder även `AbortController` för att avbryta anrop som tar längre tid än åtta sekunder.
+
+Om ett anrop misslyckas fångas felet upp och ett felmeddelande visas i stället för projektkorten.
+
+Om anropen lyckas men det inte finns några projekt som kan visas efter matchning och filtrering, visas i stället ett meddelande om att det inte finns några projekt att visa.
+
+Det är viktigt eftersom ett lyckat API-anrop inte nödvändigtvis innebär att det finns innehåll att presentera. Ett långsamt svar, ett misslyckat anrop och en tom lista är olika situationer som behöver hanteras på olika sätt.
+
+Jag testade detta genom att använda Chrome DevTools för att simulera långsamma nätverksanrop och blockera API-anropet. På så sätt kunde jag kontrollera att både laddningsmeddelandet och felmeddelandet visades som förväntat.
+
+## 7. Styrkor och utvecklingsmöjligheter
+
+En styrka med projektet är att JavaScript-koden är uppdelad i mindre moduler med tydliga ansvarsområden. De återanvändbara hjälpfunktionerna gör också att jag slipper upprepa samma kod på flera ställen.
+
+Jag tycker även att kombinationen av en lokal JSON-fil och GitHubs API blev en bra lösning eftersom den ger mig både kontroll över presentationen och möjlighet att hämta aktuell information automatiskt.
+
+Under arbetet har jag framför allt utvecklat min förståelse för asynkron JavaScript, promises, `fetch()`, arraymetoder, DOM-manipulation, händelselyssnare och localStorage.
+
+Med mer tid skulle jag vilja förbättra presentationen och strukturen för arbetslivserfarenhet och utbildning. Jag skulle också kunna utveckla felhanteringen ytterligare, exempelvis genom att lägga till en knapp för att försöka hämta projekten igen om API-anropet misslyckas.
+
+## 8. Användning av AI-verktyg
+
+Jag har använt ChatGPT och Claude som ett stöd under utvecklingsarbetet, framför allt för att förstå JavaScript-koncept, felsöka kod och diskutera olika lösningar.
+
+Det har varit särskilt användbart när jag arbetat med asynkron JavaScript, DOM-manipulation, responsiv design, tillgänglighet och händelsehantering.
+
+Jag har inte velat använda AI för att bara kopiera färdig kod. I stället har jag arbetat steg för steg, bett om förklaringar till hur koden fungerar och anpassat förslagen till min befintliga kodstruktur.
+
+Ett exempel är arbetet med laddnings- och felhantering för GitHub API. Jag testade själv olika nätverkssituationer i Chrome DevTools för att kontrollera att webbplatsen visade rätt information när anropen var långsamma eller misslyckades.
+
+AI har därmed fungerat som ett hjälpmedel i min inlärningsprocess, medan jag själv har fattat besluten om implementationen och testat resultatet.
