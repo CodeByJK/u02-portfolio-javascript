@@ -222,53 +222,64 @@
         <!-- Filters -->
 
         <div class="tech-filters">
-          <div class="filter-group" aria-label="Filter by status">
+          <!-- Filter by status -->
+          <fieldset class="filter-group">
+            <legend class="visually-hidden">Filter by status</legend>
+
             <button
               class="filter-btn active"
               data-filter="all"
               aria-pressed="true">
               All
             </button>
+
             <button
               class="filter-btn"
               data-filter="current"
               aria-pressed="false">
               Currently using
             </button>
+
             <button
               class="filter-btn"
               data-filter="learning"
               aria-pressed="false">
               Learning at Chas Academy
             </button>
-          </div>
+          </fieldset>
 
-          <div class="filter-group" aria-label="Filter by category">
+          <!-- Filter by category -->
+          <fieldset class="filter-group">
+            <legend class="visually-hidden">Filter by category</legend>
+
             <button
               class="category-btn active"
               data-category="all"
               aria-pressed="true">
               All
             </button>
+
             <button
               class="category-btn"
               data-category="technology"
               aria-pressed="false">
               Technologies
             </button>
+
             <button
               class="category-btn"
               data-category="tools"
               aria-pressed="false">
               Development Tools
             </button>
+
             <button
               class="category-btn"
               data-category="ai"
               aria-pressed="false">
               AI Tools
             </button>
-          </div>
+          </fieldset>
         </div>
 
         <!-- Tech Grid -->
@@ -352,10 +363,7 @@
           </li>
 
           <li class="tech-item" data-status="learning" data-category="tools">
-            <img
-              src="assets/logos/vitejs.svg"
-              alt=""
-              class="tech-icon" />
+            <img src="assets/logos/vitejs.svg" alt="" class="tech-icon" />
             <span class="tech-name">Vite</span>
           </li>
 
