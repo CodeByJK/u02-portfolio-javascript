@@ -208,116 +208,193 @@
       </section>
 
       <!-- Tech Stack & Tools -->
+
       <section
         id="techstack"
         class="section-tech-stack-tools"
         aria-labelledby="tech-stack-title">
-        <h2 id="tech-stack-title">My Tech Stack</h2>
-        <p class="tech-stack-description">Technologies I use regularly:</p>
+        <h2 id="tech-stack-title">Tech Stack & Tools</h2>
 
-        <ul class="tech-grid">
-          <li>
-            <img
-              src="assets/logos/html5.svg"
-              alt="HTML5 icon"
-              class="tech-icon" />
+        <p class="tech-stack-description">
+          Technologies and tools I use, explore and develop my skills in.
+        </p>
+
+        <!-- Filters -->
+
+        <div class="tech-filters">
+          <div class="filter-group" aria-label="Filter by status">
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              aria-pressed="true">
+              All
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="current"
+              aria-pressed="false">
+              Currently using
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="learning"
+              aria-pressed="false">
+              Learning at Chas Academy
+            </button>
+          </div>
+
+          <div class="filter-group" aria-label="Filter by category">
+            <button
+              class="category-btn active"
+              data-category="all"
+              aria-pressed="true">
+              All
+            </button>
+            <button
+              class="category-btn"
+              data-category="technology"
+              aria-pressed="false">
+              Technologies
+            </button>
+            <button
+              class="category-btn"
+              data-category="tools"
+              aria-pressed="false">
+              Development Tools
+            </button>
+            <button
+              class="category-btn"
+              data-category="ai"
+              aria-pressed="false">
+              AI Tools
+            </button>
+          </div>
+        </div>
+
+        <!-- Tech Grid -->
+
+        <ul class="tech-grid" id="tech-grid">
+          <!-- Technologies: Currently using -->
+          <li
+            class="tech-item"
+            data-status="current"
+            data-category="technology">
+            <img src="assets/logos/html5.svg" alt="" class="tech-icon" />
+            <span class="tech-name">HTML5</span>
           </li>
 
-          <li>
+          <li
+            class="tech-item"
+            data-status="current"
+            data-category="technology">
             <img
               src="assets/logos/css-svgrepo-com.svg"
-              alt="CSS3 icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">CSS3</span>
           </li>
 
-          <li>
+          <li
+            class="tech-item"
+            data-status="current"
+            data-category="technology">
             <img
               src="assets/logos/vscode-icons--file-type-js-official.svg"
-              alt="JavaScript icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">JavaScript</span>
           </li>
 
-          <li>
+          <!-- Technologies: Learning -->
+          <li
+            class="tech-item"
+            data-status="learning"
+            data-category="technology">
             <img
               src="assets/logos/devicon--react.svg"
-              alt="React icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">React</span>
           </li>
 
-          <li>
-            <img
-              src="assets/logos/devicon--redux.svg"
-              alt="Redux icon"
-              class="tech-icon" />
-          </li>
-
-          <li>
-            <img
-              src="assets/logos/logos--tailwindcss-icon.svg"
-              alt="Tailwind CSS icon"
-              class="tech-icon" />
-          </li>
-
-          <li>
-            <img
-              src="assets/logos/skill-icons--bootstrap.svg"
-              alt="Bootstrap icon"
-              class="tech-icon" />
-          </li>
-
-          <li>
-            <img
-              src="assets/logos/devicon--sass.svg"
-              alt="Sass icon"
-              class="tech-icon" />
-          </li>
-        </ul>
-        <h3 id="tools-title" class="tools-title">Tools</h3>
-        <ul class="tech-grid">
-          <li>
+          <!-- Development Tools: Currently using -->
+          <li class="tech-item" data-status="current" data-category="tools">
             <img
               src="assets/logos/logos--visual-studio-code.svg"
-              alt="Visual Studio Code icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">Visual Studio Code</span>
           </li>
 
-          <li>
-            <img
-              src="assets/logos/devicon--git.svg"
-              alt="Git icon"
-              class="tech-icon" />
+          <li class="tech-item" data-status="current" data-category="tools">
+            <img src="assets/logos/devicon--git.svg" alt="" class="tech-icon" />
+            <span class="tech-name">Git</span>
           </li>
 
-          <li>
+          <li class="tech-item" data-status="current" data-category="tools">
             <img
               src="assets/logos/akar-icons--github-fill.svg"
-              alt="GitHub icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">GitHub</span>
           </li>
 
-          <li>
+          <li class="tech-item" data-status="current" data-category="tools">
             <img
               src="assets/logos/devicon--figma.svg"
-              alt="Figma icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">Figma</span>
           </li>
 
-          <li>
+          <!-- Development Tools: Learning -->
+          <li class="tech-item" data-status="learning" data-category="tools">
             <img
               src="assets/logos/devicon--npm-wordmark.svg"
-              alt="npm icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">npm</span>
           </li>
 
-          <li>
+          <li class="tech-item" data-status="learning" data-category="tools">
             <img
               src="assets/logos/devicon--postman.svg"
-              alt="Postman icon"
+              alt=""
               class="tech-icon" />
+            <span class="tech-name">Postman</span>
+          </li>
+
+          <!-- AI Tools: Currently using -->
+          <li class="tech-item" data-status="current" data-category="ai">
+            <img src="assets/logos/chatgpt.svg" alt="" class="tech-icon" />
+            <span class="tech-name">ChatGPT</span>
+          </li>
+
+          <li class="tech-item" data-status="current" data-category="ai">
+            <img src="assets/logos/claude.svg" alt="" class="tech-icon" />
+            <span class="tech-name">Claude</span>
+          </li>
+
+          <li class="tech-item" data-status="current" data-category="ai">
+            <img src="assets/logos/gemini.svg" alt="" class="tech-icon" />
+            <span class="tech-name">Gemini</span>
+          </li>
+
+          <li class="tech-item" data-status="current" data-category="ai">
+            <img
+              src="assets/logos/github-copilot.svg"
+              alt=""
+              class="tech-icon" />
+            <span class="tech-name">GitHub Copilot</span>
+          </li>
+
+          <li class="tech-item" data-status="current" data-category="ai">
+            <img src="assets/logos/perplexity.svg" alt="" class="tech-icon" />
+            <span class="tech-name">Perplexity</span>
           </li>
         </ul>
       </section>
-
+      
       <!-- Projects -->
       <section
         id="projects"
