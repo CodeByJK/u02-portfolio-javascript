@@ -126,7 +126,7 @@ En av styrkorna är att jag har delat upp koden i moduler med olika ansvarsområ
 
 Arbetet har framför allt utvecklat min förståelse för asynkron JavaScript, promises, `fetch()`, arraymetoder, DOM-manipulation, händelselyssnare och `localStorage`.
 
-Med mer tid skulle jag vidareutveckla presentationen av arbetslivserfarenheten genom att lägga till arbetsuppgifter för varje roll. Jag skulle komplettera cv.json med ett nytt fält för ansvarsområden och ändra createEntry() så att arbetsuppgifterna renderas som punktlistor. Det skulle ge en tydligare bild av vad jag faktiskt har arbetat med, utan att behöva skriva in innehållet direkt i HTML-koden.
+Med mer tid skulle jag vidareutveckla presentationen av arbetslivserfarenheten genom att lägga till arbetsuppgifter för varje roll. Jag skulle komplettera `cv.json` med ett nytt fält för ansvarsområden och ändra `createEntry()` så att arbetsuppgifterna renderas som punktlistor. Det skulle ge en tydligare bild av vad jag faktiskt har arbetat med, utan att behöva skriva in innehållet direkt i HTML-koden.
 
 ## 8. Användning av AI-verktyg
 
