@@ -1,18 +1,12 @@
 # Developer Portfolio
 
-## Publicerad sida
-
-[Developer Portfolio](https://codebyjk.github.io/u02-portfolio-javascript/)
-
-# Min utvecklarportfolio
-
 En personlig utvecklarportfolio byggd med HTML, CSS och vanilla JavaScript. Syftet med webbplatsen är att presentera min bakgrund, arbetslivserfarenhet, utbildning och utvalda utvecklingsprojekt.
 
 Portfolion kombinerar data från en lokal JSON-fil med information från GitHubs REST API för att skapa dynamiskt innehåll.
 
-## Publicerad webbplats
+## Publicerad sida
 
-**[Besök min portfolio – LÄGG IN DIN PUBLICERADE NETLIFY-LÄNK HÄR]**
+[Developer Portfolio](https://codebyjk.github.io/u02-portfolio-javascript/)
 
 ## Funktioner
 
