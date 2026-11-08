@@ -37,8 +37,10 @@ Portfolion kombinerar data från en lokal JSON-fil med information från GitHubs
 u02-portfolio-javascript/
 │
 ├── assets/
+│   ├── images/ 
 │   ├── logos/
-│   └── project-pics/
+│   ├── project-pics/
+│   └── Johanna_Krantz_CV.docx
 │
 ├── css/
 │   ├── base.css
@@ -57,6 +59,7 @@ u02-portfolio-javascript/
 │   ├── projects.js
 │   ├── dom.js
 │   ├── http.js
+│   ├── techstack.js
 │   └── storage.js
 │
 ├── index.html

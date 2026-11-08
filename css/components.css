@@ -261,7 +261,6 @@ html.dark .theme-toggle .icon-moon {
   font-weight: 400;
 }
 
-
 /* Tech Stack & Tools */
 .tech-icon {
   width: 4rem;
@@ -269,14 +268,14 @@ html.dark .theme-toggle .icon-moon {
   object-fit: contain;
   display: block;
   flex-shrink: 0;
-  filter: brightness(0) saturate(100%) invert(24%) sepia(13%)
-    saturate(1160%) hue-rotate(99deg) brightness(91%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(24%) sepia(13%) saturate(1160%)
+    hue-rotate(99deg) brightness(91%) contrast(89%);
 }
 
 /* Dark mode*/
 html.dark .tech-icon {
-  filter: brightness(0) saturate(100%) invert(94%) sepia(9%)
-    saturate(300%) hue-rotate(14deg) brightness(96%) contrast(91%);
+  filter: brightness(0) saturate(100%) invert(94%) sepia(9%) saturate(300%)
+    hue-rotate(14deg) brightness(96%) contrast(91%);
 }
 
 .tech-item {
@@ -307,7 +306,9 @@ html.dark .tech-icon {
   font-family: inherit;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .filter-btn:hover,
@@ -446,9 +447,6 @@ html.dark .tech-icon {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.contact-email {
   transition: transform 0.2s ease;
   transform-origin: center;
 }
@@ -512,9 +510,6 @@ html.dark .tech-icon {
     font-size: 0.75rem; /* 12px */
   }
 
-  .tools-title {
-    font-size: 2rem;
-  }
 
   /* Contact */
   .section-contact p,

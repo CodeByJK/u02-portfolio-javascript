@@ -156,10 +156,6 @@
   margin-bottom: 2rem;
 }
 
-.tools-title {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
 
 /* Projects */
 
@@ -234,8 +230,6 @@
     width: auto;
     height: auto;
     padding: 0;
-    background-color: var(--color-nav-bg);
-    backdrop-filter: blur(10px);
     background-color: transparent;
     backdrop-filter: none;
     flex-shrink: 0;

@@ -145,16 +145,6 @@ a:hover {
   text-decoration: none;
 }
 
-.logo-tag,
-.logo-name {
-  display: block;
-  margin-left: 0.5rem;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 .logo img {
   width: 150px;
   max-width: 100%;
