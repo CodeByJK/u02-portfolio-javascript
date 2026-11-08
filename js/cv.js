@@ -34,9 +34,9 @@ const createDates = (start, end) =>
 
 const createEntry = ({ title, organization, location, note, start, end }) => {
   const details = [
-    createDetail("experience-company", "assets/logos/bi--building-fill.svg", organization),
+    createDetail("experience-company", "assets/logos/enterprise.svg", organization),
     ...(location
-      ? [createDetail("experience-location", "assets/logos/et--map-pin.svg", location)]
+      ? [createDetail("experience-location", "assets/logos/mapPin.svg", location)]
       : []),
   ];
 

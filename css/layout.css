@@ -96,10 +96,9 @@
 .experience-item {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 3px solid var(--color-border);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .experience-info {
@@ -304,9 +303,9 @@
   /* Experience & Education */
   .experience-item {
     display: grid;
-    grid-template-columns: max-content max-content 1fr;
+    grid-template-columns: 13rem max-content 1fr;
     grid-template-rows: auto auto;
-    column-gap: 1.5rem;
+    column-gap: 1.2rem;
     row-gap: 0.5rem;
   }
 
@@ -338,6 +337,10 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 0.5rem;
+  }
+
+  .experience-dates {
+    white-space: nowrap;
   }
 
   /* Projects */

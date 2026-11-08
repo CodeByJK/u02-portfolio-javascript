@@ -231,8 +231,10 @@ html.dark .theme-toggle .icon-moon {
 
 /* Experience & Education */
 .experience-item h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
+  color: var(--color-heading);
+  line-height: 1.3;
 }
 
 .exp-icon {
@@ -254,9 +256,11 @@ html.dark .theme-toggle .icon-moon {
 
 .experience-dates {
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--color-muted-text);
+  font-weight: 400;
 }
+
 
 /* Tech Stack & Tools */
 .tech-icon {
