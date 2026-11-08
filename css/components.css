@@ -264,9 +264,68 @@ html.dark .theme-toggle .icon-moon {
 
 /* Tech Stack & Tools */
 .tech-icon {
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
   object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+  filter: brightness(0) saturate(100%) invert(24%) sepia(13%)
+    saturate(1160%) hue-rotate(99deg) brightness(91%) contrast(89%);
+}
+
+/* Dark mode*/
+html.dark .tech-icon {
+  filter: brightness(0) saturate(100%) invert(94%) sepia(9%)
+    saturate(300%) hue-rotate(14deg) brightness(96%) contrast(91%);
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.tech-item[hidden] {
+  display: none;
+}
+
+.tech-name {
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+.filter-btn,
+.category-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover,
+.category-btn:hover {
+  border-color: var(--color-heading);
+}
+
+.filter-btn.active,
+.category-btn.active {
+  background-color: var(--color-badge-bg);
+  color: var(--color-text-black);
+  border-color: var(--color-accent);
+}
+
+.filter-btn:focus-visible,
+.category-btn:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* Project Cards */

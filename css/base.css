@@ -16,7 +16,7 @@
   --color-text-black: #26352c;
   --color-muted-text: #5e6259;
 
-  --color-accent: #80601c;
+--color-accent: #80601c;
 
   --gradient-primary: linear-gradient(90deg, #315b45, #80601c);
 
@@ -54,7 +54,7 @@ html.dark {
   --color-text-black: #f1eee4;
   --color-muted-text: #bec9be;
 
-  --color-accent: #e5c36a;
+  --color-accent: #deaa27;
 
   --gradient-primary: linear-gradient(90deg, #a6c6a9, #e5c36a);
 
