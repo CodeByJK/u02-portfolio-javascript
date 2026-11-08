@@ -110,7 +110,7 @@
 .experience-company,
 .experience-location {
   display: flex;
-  align-items: center;
+  align-items: normal;
   gap: 0.5rem;
 }
 
