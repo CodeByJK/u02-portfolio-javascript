@@ -14,8 +14,8 @@
     "title": "Brain climb",
     "description": "A team-built quiz application featuring interactive questions, a countdown timer, sound effects and saved quiz progress.",
     "image": "assets/project-pics/brainclimb.png",
-    "width": 1442,
-    "height": 1029,
+    "width": 1423,
+    "height": 911,
     "technologies": ["HTML", "CSS", "JavaScript"],
     "liveUrl": "https://fyllburken.netlify.app/"
   },
@@ -26,7 +26,7 @@
     "image": "assets/project-pics/mobb.png",
     "width": 2282,
     "height": 1286,
-    "technologies": ["HTML", "CSS", "JavaScript"]
+    "technologies": ["HTML", "CSS"]
   },
   {
     "title": "Pig Game",

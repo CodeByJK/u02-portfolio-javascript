@@ -2,7 +2,7 @@
 
 ## Publicerad sida
 
-[Developer Portfolio]()
+[Developer Portfolio](https://codebyjk.github.io/u02-portfolio-javascript/)
 
 # Min utvecklarportfolio
 
