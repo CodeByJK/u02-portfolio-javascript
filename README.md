@@ -94,7 +94,7 @@ I `dom.js` har jag skapat den återanvändbara hjälpfunktionen `el()`. Den anv�
 
 Jag använder händelselyssnare för funktioner som besökaren kan påverka. Temaknappen reagerar på klick, medan navigeringen hanterar bland annat klick, klick utanför menyn och Escape-tangenten.
 
-Jag har också lagt till filtrering i Tech Stack & Tools, där besökaren kan välja tekniker för att filtrera innehållet. Det gör det lättare för besökaren att hitta och utforska de tekniker som finns med i min portfolio.
+Jag har också lagt till filtrering i Tech Stack & Tools, där besökaren kan välja tekniker för att filtrera innehållet. Det gör det lättare att hitta och utforska de tekniker som finns med i min portfolio.
 
 ## 4. Semantisk och tillgänglig markup
 
